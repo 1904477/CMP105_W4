@@ -5,16 +5,26 @@
 #include "Framework/GameObject.h"
 #include <string.h>
 #include <iostream>
+#include "Player.h"
+#include "Enemy.h"
+#include "Cursor.h"
+#include "Background.h"
 
 
-class Level{
+class Level:public Player {
 public:
 	Level(sf::RenderWindow* hwnd, Input* in);
 	~Level();
-
+	
+	Player Player1;
+	Enemy Goomba;
+	Enemy BeachBall;
+	Cursor cursor;
+	Background background;
 	void handleInput(float dt);
 	void update(float dt);
 	void render();
+	
 
 private:
 	// Default functions for rendering to the screen.

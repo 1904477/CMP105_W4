@@ -31,8 +31,9 @@ void Background::moving(sf::RenderWindow& window, float dt, sf::View& view)
 		move(-3000.f * dt, 0);
 		if (getPosition().x+getSize().x<window.getSize().x)
 		{
-			std::cout << "haha";
+			
 			float x = window.getSize().x-getSize().x;
+			
 			setPosition(x, getPosition().y);
 		}
 	}

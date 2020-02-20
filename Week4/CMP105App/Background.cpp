@@ -13,7 +13,7 @@ void Background::setBackground()
 
 void Background::moving(sf::RenderWindow& window, float dt, sf::View& view)
 {
-	window.getView();
+	
 
 
 	if (input->isKeyDown(sf::Keyboard::A))
